@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>scope varaibles test</title>
+</head>
+<body>
+<h1>Variables scopes test in javascript</h1>
+<p id="demo">Some sample code test the global scope</p>
+<form action="" method="post" id="form">
+
+<table style="border:1px solid">
+	
+	<tr>
+	<td>Name:</td>
+	<td><input type="text" name="" value="" id="one"></td>
+	</tr>
+	<tr>
+		<td>Email:</td>
+		<td><input type="mail" name="" id="mail"></td>
+
+	</tr>
+	<tr><td style="margin:center">
+		<input type="button" value="Submit" name="" id='btn' onclick="formTest()">
+	</td></tr>
+</table>
+</form>
+<script type="text/javascript">
+	function formTest(){
+		var name=document.getElementById('one').value;
+		var mail=document.getElementById('mail').value;
+		document.getElementById("btn").href = "http://www.cnn.com/";
+		
+</script>
+</body>
+</html>
