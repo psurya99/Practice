@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Substring</title>
+</head>
+<body>
+<form>
+	
+	<table>
+		<tr>
+			<td>Get Email:</td>
+
+			<td><input type="text" name="email" id="getMail"></td>
+		</tr>
+		<tr>
+			<td>MailText:</td>
+
+			<td><input type="text" name="email" id="mailText"></td>
+		</tr>
+	<tr>
+			<td>DomainName:</td>
+
+			<td><input type="text" name="email" id="domainText"></td>
+		</tr>
+
+	<tr>
+			<td>DomainId:</td>
+
+			<td><input type="text" name="email" id="domainId"></td>
+		</tr>
+
+	<tr>
+			<td>Result:</td>
+
+			<td><input type="button" name="email" id="btn" value="Result" onclick="getMailDetails()"></td>
+		</tr>		
+	</table>
+
+</form>
+
+<script type="text/javascript">
+	
+	function getMailDetails()
+	{
+
+		 var emailAddress=document.getElementById('getMail').value;
+
+		 var mailName=emailAddress.substring(0,emailAddress.indexOf("@"));
+		 var domainName=emailAddress.substring(emailAddress.indexOf("@")+1);
+		var domainId=emailAddress.substring(emailAddress.lastIndexOf("."));
+
+		 document.getElementById("mailText").value=mailName;
+		document.getElementById("domainText").value=domainName;
+		 document.getElementById("domainId").value=domainId;
+	}
+
+</script>
+
+</body>
+
+
+</html>
